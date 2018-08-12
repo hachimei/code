@@ -1,0 +1,85 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Electron 控制管理界面</title>
+    <style>
+
+        html, head, body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .submit {
+            z-index: 99;
+            position: fixed;
+            top: 5%;
+            right: 6%;
+            width: 9%;
+            height: 9%;
+            border: double 3px green;
+        }
+
+        .submit:hover {
+            position: fixed;
+            top: 5%;
+            right: 6%;
+            width: 9%;
+            height: 9%;
+            border: double 3px greenyellow;
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="../common/plugins/codemirror.css">
+    <link rel="stylesheet" href="../common/plugins/monokai.css">
+    <link rel="stylesheet" href="../common/plugins/blackboard.css">
+
+    <script src="../common/plugins/codemirror.js"></script>
+    <script src="../common/plugins/javascript.js"></script>
+    <script src="../common/plugins/sublime.js"></script>
+</head>
+
+<body>
+<!--右边控制台-->
+<textarea id="textareaID"></textarea>
+<input class="submit" type="button" id="submitId" value="提交"/>
+<script>
+
+    /**
+     * 启动代码高亮插件
+     */
+    const editor = CodeMirror.fromTextArea(document.getElementById('textareaID'), {
+        lineNumbers: true,
+        mode: 'javascript',
+        keyMap: 'sublime',
+        autoCloseBrackets: true,
+        matchBrackets: true,
+        showCursorWhenSelecting: true,
+        theme: 'blackboard',
+        tabSize: 4,
+    });
+
+    /**
+     * 监听提交按钮事件
+     * @type {HTMLElement | null}
+     */
+    let mSubmit = document.getElementById('submitId');
+    mSubmit.onclick = function () {
+        eval(editor.getValue());
+    }
+</script>
+
+<style type="text/css">
+    .CodeMirror {
+        border: 1px solid black;
+        font-size: 16px;
+        line-height: 20px;
+    }
+</style>
+
+<script src="controller.js"></script>
+
+</body>
+</html>
+
