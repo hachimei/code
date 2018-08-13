@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Socket初试</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+</head>
+<body>
+</body>
+<script type="text/javascript">
+    var socket = io.connect('http://localhost:8080');
+    socket.on('news',function(data){
+        console.log(data.hello)
+        document.write(data.hello);
+        socket.emit('my other event', 'You get msg?',function(data){alert(data)})
+    });
+    
+</script>
+</html>
