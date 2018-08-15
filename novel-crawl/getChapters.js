@@ -17,7 +17,7 @@ pages.map((page)=>{
         'retryDelay': 5000
     });
     if(res.statusCode === 200){
-        var body = iconv.decode(res.body, 'utf8');
+        var body = iconv.decode(res.body, 'gbk');
     
         var $ = cheerio.load(body);
     

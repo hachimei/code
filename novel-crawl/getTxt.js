@@ -24,7 +24,7 @@ urls.map((url, index)=>{
     
         var content = $('#txt').text()
         //log(1)
-        var fileName = './hj'+Math.floor(index/200)+'.txt';
+        var fileName = 'tjsl.txt';
         
         fs.writeFileSync(fileName,title+'\r\n', {flag: 'a'})
         fs.writeFileSync(fileName,content+'\r\n', {flag: 'a'})

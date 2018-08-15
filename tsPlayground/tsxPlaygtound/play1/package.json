@@ -1,0 +1,28 @@
+{
+  "name": "play1",
+  "version": "1.0.0",
+  "description": "play react with ts!",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --config webpack.common.config.js"
+  },
+  "keywords": [
+    "typescript",
+    "react",
+    "webpack"
+  ],
+  "author": "hachimei",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "@types/react": "^15.6.19",
+    "@types/react-dom": "^15.5.8",
+    "awesome-typescript-loader": "^5.2.0",
+    "source-map-loader": "^0.2.3",
+    "ts-loader": "^4.4.2"
+  }
+}
