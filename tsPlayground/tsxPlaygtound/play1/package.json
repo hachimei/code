@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --config webpack.common.config.js"
+    "dev": "node ./scripts/dev.js",
+    "build": "node ./scripts/build.js"
   },
   "keywords": [
     "typescript",
@@ -19,10 +20,16 @@
     "react-dom": "^15.5.4"
   },
   "devDependencies": {
+    "@types/glob": "^5.0.35",
     "@types/react": "^15.6.19",
     "@types/react-dom": "^15.5.8",
+    "@types/rimraf": "^2.0.2",
+    "@types/shelljs": "^0.8.0",
     "awesome-typescript-loader": "^5.2.0",
+    "shelljs": "^0.8.2",
     "source-map-loader": "^0.2.3",
-    "ts-loader": "^4.4.2"
+    "ts-loader": "^4.4.2",
+    "webpack": "^4.16.5",
+    "webpack-dev-server": "^3.1.5"
   }
 }

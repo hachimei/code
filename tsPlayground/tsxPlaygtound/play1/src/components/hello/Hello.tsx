@@ -17,7 +17,7 @@ export default class Hello extends React.Component<Props, object>{
         return(
             <div className="hello">
             <div className="greeting">
-              Hello {name + getExclamationMarks(enthusiasmLevel)}
+              Hello, meeting with ok {name + getExclamationMarks(enthusiasmLevel)}
             </div>
           </div>
         )
