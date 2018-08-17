@@ -1,4 +1,4 @@
-const webpack = require('webpack');
+const webapck = require('webpack');
 const config = require('./webpack.common.config.js');
 
 config.devServer = {
@@ -6,6 +6,8 @@ config.devServer = {
     publicPath: '/dist/'
 }
 
-config.plugins.push(new webpack.HotModuleReplacementPlugin())
+config.plugins.push(new webapck.HotModuleReplacementPlugin());
+
+config.mode = 'development';
 
 module.exports = config;

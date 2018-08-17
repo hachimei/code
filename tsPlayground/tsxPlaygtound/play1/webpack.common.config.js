@@ -1,5 +1,3 @@
-const webpack = require('webpack');
-
 module.exports = {
     entry: "./src/index.tsx",
     output: {
@@ -21,7 +19,6 @@ module.exports = {
       ]
     },
   
-    plugins: [
-      new webpack.HotModuleReplacementPlugin()
-    ],
+    plugins: []
+
   };
