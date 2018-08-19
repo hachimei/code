@@ -65,7 +65,7 @@ function quick(arr, left, right) {
     }
 }
 function partition(arr, left, right) {
-    var pivor = arr[Math.floor(left + right) / 2], i = left, j = right;
+    var pivor = arr[Math.floor((left + right) / 2)], i = left, j = right;
     while (i <= j) {
         while (arr[i] < pivor) {
             i++;
@@ -76,7 +76,7 @@ function partition(arr, left, right) {
         if (i <= j) {
             var temp = arr[i];
             arr[i] = arr[j];
-            arr[j] = arr[i];
+            arr[j] = temp;
             i++;
             j--;
         }

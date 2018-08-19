@@ -55,40 +55,40 @@ export default class ArrayList<T>{
 }
 
 function quick(arr: Array<any>, left: number, right: number){
-    let index: number;
+    let index:number
 
     if(arr.length > 1){
-        index = partition(arr, left, right)
+        index = partition(arr, left, right);
 
         if(left < index - 1){
-            quick(arr, left, index-1)
+            quick(arr, left, index - 1)
         }
 
         if(right > index){
             quick(arr, index, right)
         }
     }
-
 }
 
 function partition(arr: Array<any>, left: number, right: number): number{
-    let pivor: number = arr[ Math.floor(left + right) / 2 ],
+
+    let pivor:number = arr[ Math.floor( (left + right) / 2 ) ],
     i: number = left,
     j: number = right
 
-    while( i <= j){
-        while( arr[i] < pivor ){
+    while(i <= j){
+        while(arr[i] < pivor){
             i++
         }
 
-        while( arr[j] > pivor ){
+        while(arr[j] > pivor){
             j--
         }
 
-        if( i <= j ){
-            let temp = arr[i]
+        if(i <= j){
+            let temp: number = arr[i]
             arr[i] = arr[j]
-            arr[j] = arr[i]
+            arr[j] = temp
 
             i++
             j--
@@ -96,6 +96,5 @@ function partition(arr: Array<any>, left: number, right: number): number{
 
     }
 
-    return i
-
+    return i;
 }
