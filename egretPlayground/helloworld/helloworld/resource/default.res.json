@@ -1,0 +1,20 @@
+{
+	"groups": [
+		{
+			"keys": "description_json,saikikusuo_jpg",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"name": "description_json",
+			"type": "json",
+			"url": "config/description.json"
+		},
+		{
+			"name": "saikikusuo_jpg",
+			"type": "image",
+			"url": "saikikusuo.jpg"
+		}
+	]
+}
