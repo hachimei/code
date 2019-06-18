@@ -9,7 +9,9 @@ const domain = 'http://m.tetexs.com';
 // 获取标题和文本内容
 var urls = fs.readFileSync('./chapters.txt','utf8').split('\r\n')
 
-urls.map((url, index)=>{
+getTxt()
+{
+    urls.map((url, index)=>{
     var res = request('GET', domain+url, {
         'timeout': 10000,
         'retry': true,
@@ -29,4 +31,7 @@ urls.map((url, index)=>{
         fs.writeFileSync(fileName,title+'\r\n', {flag: 'a'})
         fs.writeFileSync(fileName,content+'\r\n', {flag: 'a'})
     }
-})
+    })
+}
+
+export {getTxt};
